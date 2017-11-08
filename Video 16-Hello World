@@ -1,0 +1,8 @@
+# include <stdio.h>
+int main(void)
+{
+  printf("欢迎来到C世界!\n");
+  return 0;
+ }
+当我们运行程序的时候，我们的软件会生成一个xx.exe的软件。之后这个exe会被（同时请求操作系统）CPU执行。
+所有软件的运行都是建立在有一个操作系统上的
