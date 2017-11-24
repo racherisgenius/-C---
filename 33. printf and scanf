@@ -1,0 +1,42 @@
+1. printf()
+- 将变量的内容输出到显示器上
+   1）printf("字符串\n"); \\转义字符/n表换行
+   2) printf("输出控制符"，输出参数）；
+      ex：
+      #include <studio.h>
+      int main(void)
+      {
+          int i = 10; 
+          printf("%d", i) //%d表示十进制
+         /*
+         为什么要用%d呢？因为在程序里的i不代表10，而是二进制里面的10.所以需要十进制去格式化一下
+         */
+          return 0;
+       }
+    3）printf("输出控制符1，输出控制符2",输出参数1，输出参数2);
+       -输出控制符和输出参数的个数必须匹配
+      ex：
+       #include <stdio.h>
+       int main(void)
+       {
+           int j = 3;
+           int k = 5;
+           printf("%d %d\n",j , k);
+       }
+    4）printf（"输出控制符 非输出控制符"， 输出参数）
+       - %开头的都是输出控制符
+          *输出控制符包括：
+             %d 
+             %ld
+             %c
+             %f
+             %lf
+             %x/%X/%#X ←推荐使用
+          ex:
+           #include <studio.h>
+           int main (void)
+           {
+               int x = 100; //100是十进制
+               printf("%x\n",x);
+               return 0;
+           }
