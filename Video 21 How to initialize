@@ -1,0 +1,9 @@
+type name = data;
+
+
+type name;
+name = data;
+
+1. int i = 3;  equals int i; i = 3;
+2. int i,j; equals int i; int j;
+3. int i,j=3; equals int i; int j; j=3;
