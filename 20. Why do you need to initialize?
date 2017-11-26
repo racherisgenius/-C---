@@ -1,7 +1,7 @@
 变量为什么必须初始化？
 - 所谓初始化就是赋值的意思
 
-# inlcude<studio.h>
+# inlcude<stdio.h>
 int main(void)
 {
  int i;
