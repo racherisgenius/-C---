@@ -3,7 +3,7 @@
    1）printf("字符串\n"); \\转义字符/n表换行
    2) printf("输出控制符"，输出参数）；
       ex：
-      #include <studio.h>
+      #include <stdio.h>
       int main(void)
       {
           int i = 10; 
@@ -33,7 +33,7 @@
              %lf
              %x/%X/%#X ←推荐使用
           ex:
-           #include <studio.h>
+           #include <stdio.h>
            int main (void)
            {
                int x = 100; //100是十进制
