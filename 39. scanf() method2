@@ -1,6 +1,6 @@
 1. scanf()用法二：
   ex：
-  #include <studio.h>
+  #include <stdio.h>
   int main(void)
   {
      int i;
