@@ -3,7 +3,7 @@
   2） 两种用法
       用法一：scanf（“输入控制符”，输入参数）；//&i表示i的地址；&表示一个取地址符
              功能：将从键盘输入的字符转化成输入控制符所规定的数据，然后存入已输入参数的值为地址的变量中。
-             ex: # include <studio.h>
+             ex: # include <stdio.h>
              int main(void)
              {
                  int i;
