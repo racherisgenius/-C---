@@ -1,0 +1,15 @@
+# include <studio.h>
+int main(void)
+{
+  if(3 > 2)
+    printf("AAAA\n");
+  return 0;
+}
+
+1. if最简单表达式
+    格式：
+         if (表达式)
+                   语句
+    功能：
+         如果表达式为真，执行语句
+         不成立，语句不执行
