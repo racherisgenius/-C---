@@ -1,0 +1,26 @@
+1. if...else....
+- 还记不记得一开始的那个code delta的那个！
+ex:
+# include <stdio.h>
+int main(void)
+{
+  double delta = 3; //第一个语句
+  if (delta > 0)       //第二个语句开始
+        printf("有两个解！\n");
+  else if (delta == 0)
+        printf("有一个解!\n");
+  else 
+        printf("无解!\n"); //第二个语句结束
+  return 0; //第三个语句
+        
+}
+
+  1) 格式：
+      if (1)
+        A;
+      else if (2)
+        B;
+      else if (3)
+        C; //证明1，2 不成立
+      else 
+        D; //证明1，2,3都不成立
