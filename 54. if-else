@@ -1,0 +1,16 @@
+# include <studio.h>
+int main(void)
+{
+  int i, j;
+  scanf("%d %d, &i, &j);
+  if(i > j)
+     printf("i大于j\n");
+  else
+     printf("i小于j\n");
+     
+  printf("CCCC\n"); //功能独立就分割
+   return 0;
+}
+/*
+    这里面是两个语句，一个是if-else，另一个是最后的那个CCC因为if-else都只控制一个语句
+*/
