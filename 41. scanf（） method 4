@@ -3,7 +3,7 @@
   2. scanf中尽量不要用非输入控制符，尤其是不要用\n
   3. 应该编写代码对用户的非法输入进行处理
      ex:
-     # include <studio.h>
+     # include <stdio.h>
      int main(void)
      {
        int i;
