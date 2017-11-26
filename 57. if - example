@@ -1,0 +1,25 @@
+if的实际例子
+
+# include <stdio.h>
+int main(void)
+{
+  float score;
+  printf("请输入您的考试成绩："); //提示信息
+  scanf("%f, &score);
+  
+  if(score > 100)
+     printf("这是做梦\n");
+     //如果你选择90 <= score <= 100，这个是不对的因为第一开始左边的是做真假判断，那么这样就会变成0和1而这个一定是<= 100
+     //那么这个等式就是永远成立的. 所以他无法判断score的值的多少。
+  else if (score>=90 && score<=100)
+      printf("优秀\n");
+  else if (score>=80 && score<=90)
+      printf("良好\n");
+  else if (score>=60 && score<=80)
+      printf("及格\n");
+  else if(score>=0 && score<60)
+      printf("不及格\n");
+  else 
+      prinf("输入的分数过低\n");
+   return 0;
+}
