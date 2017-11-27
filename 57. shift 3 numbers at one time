@@ -1,0 +1,12 @@
+互换三个数字！
+# include <stdio.h>
+int main (void)
+{
+  //其实你可以排序……
+  int a, b, c; 
+  printf("请输入三个整数（中间以空格分割）:");
+  scanf("%d %d %d", &a, &b, &c);
+  //编写代码完成a最大值 b中间值 c最小值
+  printf("%d %d %d\b", a, b, c); 
+  return 0;
+}
