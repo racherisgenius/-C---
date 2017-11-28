@@ -1,0 +1,88 @@
+1. if语句常见的错误 -2
+
+
+#include <stdio.h>
+int main(void)
+{ 
+   if(3 > 2);
+   //加了分号就是两个语句了， 那么这样else直接开头就不对了
+       printf("AAAA\n");
+   else 
+       printf("hhhh\n");
+   return 0;  
+}
+
+
+所以：
+if(1)
+   A;
+else 
+   B;
+//这个是正确的
+
+
+if(2);
+   A;
+else 
+   B;
+//是错误的
+
+3. 常见问题3
+    # include <stdio.h>
+      int main(void)  
+      {
+          if(3 >2)
+              printf("AAAAA\n");
+          else if (3 >1)
+              printf("BBBB\n");
+          else 
+              printf("CCCC\n");
+           return 0;
+        }
+
+    → if(表达式1）
+         A;
+     else if（表达式2）
+         B；
+     else if （表达式3）
+         C;
+     else 
+         D;
+  即使表达式1和2都成立，也只会执行A语句。      
+//当表达式1和2都成立的时候，只执行1（最优先的那个！）
+
+4. 常见问题4
+  if(表达式1）
+      A;
+  else if（表达式2）
+      B；
+  else if （表达式3）
+      C;
+  else （表达式4） //这里要是else if为了判断真假，不然就是错的。
+      D;
+ 5. 分号
+   #include <stdio.h>
+   int main(void)
+   {
+     if (3 > 2)
+         printf("AAAA\n");
+     else if (2 > 5)
+         printf("BBBB\n");
+     else (5 > 10) ;
+     /*
+       如果你在这里加了一个；这个语句就变成了
+       else 
+         (5 > 10)；
+         就根本不行的宝贝，没有实际意义的语句。
+         语法上没错，但是逻辑上是不对的。
+         else (expression 4);
+              D;
+         等价于
+         else 
+            (expression4）;
+         D;
+     */
+     
+         printf("CCCC\n");
+     return 0;
+   }
