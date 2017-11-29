@@ -1,0 +1,26 @@
+*从键盘里输入一个数字，如果是回文的话,则返回yes；否则返回no
+*回文：正这些和到着写都一样
+ ex： 121 123321
+ # include <stdio.h>
+ int main(void)
+ {
+   int val; //存放待判断数字
+   int m;
+   int sum = 0; 
+   
+   printf("请输入你需要判断的数字么么哒： ");
+   scanf("%d", &val);
+   
+   m = val; 
+   while (m)
+   {
+      sum = sum * 10 + m%10;
+      m /= 10;
+   }
+   if (sum == val)
+      printf("Yes!\n");
+    else 
+      printf("No!\n");
+      
+   return 0;
+ }
