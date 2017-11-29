@@ -1,0 +1,30 @@
+2. 于for之间的比较
+ex:
+# include <stdio.h>
+int main(void)
+{
+
+
+// for loop version
+ int sum = 0; 
+ int i ;
+ for (i=1; i<101; ++i)
+ {
+      sum += i; 
+ }
+ printf("sum = %d\n", sum);
+ 
+ 
+// wile loop version
+  int i = 1;
+   while( i <101)
+   {
+       sum += i;
+       ++i;
+   }
+  return 0;
+}
+
+*for和while可以相互转换 （逻辑上等价）
+  - 但是for的逻辑性更强，更难出错，推荐多使用！诶嘿！
+  - for看的更清楚
