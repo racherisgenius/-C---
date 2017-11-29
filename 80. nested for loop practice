@@ -1,0 +1,54 @@
+# include <stdio.h>
+int main (void)
+{
+  int i,j;
+  for (i=0; i<3; ++i)
+      for(j=2； j<5; ++j)
+          printf("哈哈!\n");
+      printf("嘻嘻!\n");
+     /*
+     整个程序只有两个语句，所以嘻嘻只会被输出一次。
+     不过哈哈会执行9次，因为内循环3次，外循环3次
+     
+     */
+  return 0;
+}
+
+*假设我们在加一个语句
+# include <stdio.h>
+int main (void)
+{
+  int i,j;
+  for (i=0; i<3; ++i)
+      printf("嘿嘿！\n");
+      for(j=2； j<5; ++j)
+          printf("哈哈!\n");
+      printf("嘻嘻!\n");
+     /*
+     整个程序有三句话，两个for，一个printf
+     所以应该是三个嘿嘿，三个哈哈，一个嘻嘻
+     */
+  return 0;
+}
+
+*再来一波新的
+# include <stdio.h>
+int main (void)
+{
+  int i,j;
+  for (i=0; i<3; ++i)
+  {
+      printf("嘿嘿\n");
+      for(j=2； j<5; ++j)
+      {   printf("哈哈!\n")；
+          printf("嘻嘻!\n");
+       }
+       printf("呜呜！\n");
+   }
+   
+     /*
+     整个程序只有一个句子，就一个for循环。
+     3次哈哈嘻嘻，1次呜呜 重复3波。
+     */
+  return 0;
+}
