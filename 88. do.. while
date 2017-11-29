@@ -1,0 +1,12 @@
+1. do while 
+- 主要用于人机交互
+【格式】
+   do 
+   {
+      A;
+   }while(表达式)
+ 【do while 和while是否等价】
+ - for和while可以转换，但是do while和while\for 是不可以相互转换的
+ - 要注意的是for和while只要表达式里面有一个是假的，那么则不成立，
+ - 但是do while是一定会执行一次的，不管怎么样。
+    *先执行do
