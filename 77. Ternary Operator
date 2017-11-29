@@ -1,0 +1,15 @@
+【格式】
+A ? B : C
+等价于
+ if (A)
+    B;
+ else 
+    C;
+【例子】
+# include <stdio.h>
+int main (void)
+{
+  int i;
+  i = (0>2 ?5 : 1); //result = 1
+  return 0;
+}
