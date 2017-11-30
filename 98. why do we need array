@@ -1,0 +1,9 @@
+# include <stdio.h>
+int main(void)
+{
+  int a[5] = {1, 2, 3, 4, 5};
+  //数组里面5个元素，a0-a4
+  return 0;
+}
+A[0]表示第一个元素
+a[4]表示最后一个元素
