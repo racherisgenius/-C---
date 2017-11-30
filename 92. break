@@ -1,0 +1,50 @@
+1. break 和 continue 
+ - break用于循环的话是终止循环。
+ - break用于switch的话是终止语句的。
+ - break不能直接用于if，除非if属于循环体中一部分。
+ ex:
+ for(i=0; i<3; ++i)
+ {
+   if (3 > 2)
+        break; 
+        //在这里虽然这个break看上去是终止了if，但实际上终止了循环
+        //也就是说在循环里当这个if语句为true，那么就break出去
+   printf("嘿嘿\n"); //所以这个是永远不会输出的
+ }
+ 
+ 2. break用于多个for循环
+ - 在多层循环里，break只能结束距离他最近的那个循环
+ # include <stdio.h>
+ int main(void)
+ {
+   int i,j;
+   
+   for (i=0; i<3; ++i)
+   { 
+      for (j=1; j<4; ++j)
+        break;           //在这里 break是内循环的语句，所以是结束了内循环
+        printf("我超牛逼的！\n"); //在这里printf是属于外循环的语句，所以肯定会输出
+   }
+   return 0;
+ }
+ 
+ 3. 多个switch
+ - 多层switch中，break只能终止距离他最近的switch
+  switch(x)
+  {
+  case 1:
+      switch(y)
+      {
+       case 0:
+             a++;
+             break; //这里的break结束了最近的switch，并且结束了这一块的switch
+       case 1:
+             b++;
+             break;
+       } 
+  break; //所以直接跳到了这里的break，结束了外层的switch
+  case 2:
+         a++;
+         b++;
+         break;
+  }
