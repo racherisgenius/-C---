@@ -1,0 +1,49 @@
+# include <stdio.h>
+int main(void)
+{  
+
+   /*
+   max是函数名。i和j是形式参数，aka 形参，void指返回值，即无。
+   main 函数会被先执行
+   当我们执行完了max function后，那么i和j的空间就很会被释放
+   所以只有当用的时候，才会被分配空间。而且这两块空间不一定是一样的。
+   function可以避免写重复性代码
+   */
+   
+   void max (int i, int j)
+   {
+       if ( i > j)
+           printf("%d\n", i)
+       else 
+           printf("%d\n", j);
+   }
+   int a, b, c, d, e, f;
+  // a = 1, b = 2, c = 3, d = 9, e = -5, f = 100;
+   //逗号表达式：先执行第一个。但是最好还是；写
+   a = 1;
+   b = 2;
+   c = 3; 
+   d = 9; 
+   e = -5; 
+   f = 100;
+   //要写一个a和b的比较
+   
+   if(a > b)
+        printf("%d\n", a);
+   else 
+        printf("%d\n", b);
+   if(c > d)
+        printf("%d\n", c);
+   else 
+        printf("%d\n", d);
+   if(e > f)
+        printf("%d\n", e);
+   else 
+        printf("%d\n", f);
+        
+        //你发现了吗！代码都是重复的！！！
+        //所以我们需要一个function让他变得简单【操作一样，但data不一样】
+    max (a, b) //这个function就算求a，b之间的最大值
+   return 0;
+}
+
