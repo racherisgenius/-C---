@@ -1,0 +1,19 @@
+1. return表达式的含义
+
+ex:
+ # include <stdio.h>
+ void f(void)
+ {
+   int i;
+   for (i=0; i<5; ++i)
+   {
+      printf("大家辛苦了！\n");
+      break；
+   }
+   printf("筒子们好！\n");
+ }
+ 
+ int main(void)
+ {
+   return 0;
+ }
