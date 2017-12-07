@@ -17,3 +17,18 @@ ex:
  {
    return 0;
  }
+
+  /*
+  return 终止被调用函数，向主调函数返回表达式的值
+       * 如果return为空，则只终止函数，不向被调函数返回任何值
+        ex: 
+        void f()
+        {
+           return;
+        }
+         int f()
+         {
+           return 10;
+         }
+  break 终止循环和switch的
+  */
