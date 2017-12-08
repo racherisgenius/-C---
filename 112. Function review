@@ -1,0 +1,11 @@
+# include <stdio.h>
+void f (int i)  //这里的i和下面的i不冲突，因为i只会在他自己的函数内执行。
+{
+}
+int main (void)
+{
+  int i;
+  i = f(5);
+  
+  return 0;
+}
