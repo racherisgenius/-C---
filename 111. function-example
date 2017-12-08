@@ -6,15 +6,23 @@ int main(void)
   int i;
   
   scanf("%d", &val);
-  for(i=0; i<val; ++i)
+if (is_prime(val))
+     printf("Yes\n");
+else 
+    printf("NO\n");
+}
+//我们把他变成一个函数！
+↓
+bool; is_prime(int val) //形参需要就收数据的嘛
+{
+    int i;
+    for(i=0; i<val; ++i)
   {
       if(val%i == 0)
             break;
   }
   if (i == val)
-      printf("YES!\n");
+       return true;
   else 
-      printg("NO!\n");
-  
-  return 0;
+      return false;
 }
