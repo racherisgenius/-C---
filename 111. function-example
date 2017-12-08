@@ -1,0 +1,20 @@
+ex:
+# include <stdio.h>
+int main(void)
+{
+  int val;
+  int i;
+  
+  scanf("%d", &val);
+  for(i=0; i<val; ++i)
+  {
+      if(val%i == 0)
+            break;
+  }
+  if (i == val)
+      printf("YES!\n");
+  else 
+      printg("NO!\n");
+  
+  return 0;
+}
