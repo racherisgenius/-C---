@@ -1,0 +1,4 @@
+函数是我们C语言的基本单位
+类是Java，c++，c#的基本单位
+1. 常用的系统函数
+double sqrt(double x);
