@@ -1,0 +1,16 @@
+# include <stdio.h>
+
+/*void (f)
+{
+  printf("哈哈\n"); //这个函数不规范，因为没有return；
+}
+*/
+int main (void)
+{
+  return 0;
+}
+
+void (f)
+{
+  printf("哈哈\n"); //这个函数不规范，因为没有return；
+} //但是如果这个f放在这里，那么系统会报错，因为他不知道f是个嘛
