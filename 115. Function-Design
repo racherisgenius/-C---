@@ -1,6 +1,8 @@
 1. 如何在软件开发中合理的设计函数来解决实际问题
 /*
   只用一个函数实现不好，代码的利用率不高
+  但是，用一个函数来做判断的话：
+              优点：代码的可重用性高
 */
 # include <stdio.h>
 int main (void)
@@ -62,7 +64,66 @@ int main (void)
    for (i=2; i<=val; ++i)
    {
       //判断i是不是素数，是-输出，不是-不输出。
-   
+      for(j=2; j<i; ++j) //这里判断的是i的值，只是用j来表示 2-i-1（中间数字）
+      { 
+        //内部是判断i是不是素数
+          if(0 == i%j)
+               break;
+       }
+     if (j == i)
+        printf("%d\n", i);    
+    }
    }
    return 0;
  }
+1. 用main 函数实现，有局限性
+   - 代码的重用性不高。
+   - 代码也不容易理解。
+   
+ BUT 还记不记得我们写了一个isprime的函数！可以直接在man里调用。
+ ↓  //牛逼啊
+ int main(void)
+ {
+   int val;
+   int i;
+   int j;
+   
+   scanf("%d", &val);
+   for(i=2; i<=val; ++i)
+   {
+        if (isPrime(i))
+             printf("%d\n", i) //这里就是用到了模块化
+   }
+
+   return 0;
+ }
+ 
+ 3. *******再来一个高级的******
+  int main(void)
+ {
+   void TraverseVal(int n)
+   {
+    
+   //本函数的功能是把1-n之间的素数在显示器上输出
+    int i;
+    for(i=2; i<=n; ++i)
+   {
+        if (isPrime(i))
+             printf("%d\n", i) //这里就是用到了模块化
+   }
+
+   }
+   int val;
+   int i;
+   int j;
+   
+   scanf("%d", &val);
+   TreaverseVal(val);
+   //牛逼不牛逼！
+   return 0;
+ }
+ 
+ *********总结********
+ 1. 一个函数的功能尽量独立，单一
+ 2. 多学习！，多模仿牛人的代码！
+ 
