@@ -1,0 +1,16 @@
+1. 形参和实参
+ex:
+# include <stdio.h>
+void f(int i) //形参
+{
+  printf("%d\n",i); 
+}
+int main (void)
+{
+  f(5);  //实参
+  return 0;
+}
+  1） 形参和实参的关系
+               - 个数是一致的
+               - 位子也要一一对应（和物理题目一样）
+               
