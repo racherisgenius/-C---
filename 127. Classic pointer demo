@@ -1,7 +1,7 @@
 #include <stdio.h>
 //swap two numbers by using pointer
 
-void swap(int a, int b)
+void swap1(int a, int b) //错误的
 {
     int t; 
     t = a;
@@ -9,7 +9,18 @@ void swap(int a, int b)
     b = t; 
     
     return;
+//因为这里你没有改动main 函数里面的a b 值
 
+}
+void swap(int * p, int * q) //错误的
+{
+    int * t; 
+    t = p;
+    p = q; 
+    q = t; 
+    
+    return;
+//这样改也没什么屌用，因为你没有改动*p 和 *q 的值（as we know *q和q是不一样的）
 }
 int main(void)
 {
