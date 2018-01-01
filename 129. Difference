@@ -1,0 +1,51 @@
+# include <stdio.h>
+void swap1(int i, int j)
+{
+    int t; 
+    t = i; i = j= j = t;
+}
+//到这里i 和 j的值发生了变化（因为swap1分配给了i 和 j 两个空间），但是a 和 b的并没有变化。
+int main(void)
+{
+    int a = 3;
+    int b = 5;
+    //在这里main会分配两个空间给a和b 
+     swap1(a, b); 
+    //在这里main调用swap1函数
+     printf("a = %d, b = %d\n", a, b);
+     //因为swap1里面只有i和j发生了变化所以a 和b 还以不变的。
+    return 0;
+}
+/*
+  这里要注意形参和主函数里的参数是不一样的
+*/
+
+# include <stdio.h>
+void swap1(int * p, int * q) //如果是指针的话用p q r s
+{
+    int *t; 
+    t = p; p = q; q = t;
+    //但是你这样只互换了q 和 p 的值，而不是*p *q
+    /*
+    所以要这么改
+    int t;
+    t = *p; *p = *q; *q = t;
+    */
+}
+//在这里你把a发给了p，b发给了q。
+int main(void)
+{
+    int a = 3;
+    int b = 5;
+    //在这里main会分配两个空间给a和b 
+     swap1(&a, &b); 
+    //取地址符让p get a的地址
+     printf("a = %d, b = %d\n", a, b);
+     //因为swap1里面只有i和j发生了变化所以a 和b 还以不变的。
+    return 0;
+}
+/*
+  这里要注意形参和主函数里的局部变量是不一样的
+*/
+
+
