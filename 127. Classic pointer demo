@@ -1,0 +1,49 @@
+#include <stdio.h>
+//swap two numbers by using pointer
+
+void swap(int a, int b)
+{
+    int t; 
+    t = a;
+    a = b; 
+    b = t; 
+    
+    return;
+
+}
+int main(void)
+{
+  int a = 3; 
+  int b = 5;
+  swap(a, b); //在这里的a，b没有了，但是主函数里面的a，b还是存在的
+  //你互换了形参里面的ab和主函数里的ab是没有影响的
+ 
+  printf("a = %d,b = %d\n", a, b);
+  
+  return 0;
+  
+}
+// BUT 这样写是不对的，会出错的！因为你在swap这个函数里值改变了形参而不是main里面的参数
+//所以这里print出来的值a和b是不变的
+***来一个新的****
+void swap1(int * p, int * q)
+{
+    int t; 
+    t = *p;
+    *q = *p; 
+    *q = t; 
+    
+    return;
+
+}
+int main(void)
+{
+  int a = 3; 
+  int b = 5;
+  swap(a, b); 
+  //这里如果你只写a和b的话一定是错的，因为你这里a是发给p变量的，而p是一个存地址的东西，
+  //所以，这里要写swap(&a, &b)
+  /*
+  这个程序换的是pq的内容而不是单纯swap a和b
+
+*/
