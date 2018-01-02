@@ -1,0 +1,7 @@
+1. sizeof(变量名）→返回改变量所占的字节数
+ *指针变量的大小永远是一直的 regardless the size of the variable. 
+ - 都是4个字节
+ *具体其实我也不是很明白
+ 1. 第一个存放地址可以get
+ 2. type可以表示出长度
+ 3. 4个状态
