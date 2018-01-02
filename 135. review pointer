@@ -1,0 +1,26 @@
+# include <stdio.h>
+void f(int * pArr, int len)
+{
+    pArr[2] = 10; //这里的操作就是对a进行操作
+    //pArr[2] == *(pArr+2) == *(a+2) == a[2]
+}
+
+int main(void)
+{
+  int a[5] = {1,2,3,4,5};
+  f(a,5);
+  //a == &a[0]
+  printf("%#X, %#X\n", a, &a[0]);
+  return 0;
+}
+1. 确定一个一维数组里需要几个参数：
+   1） 数组的第一个元素的地址
+   2） 数组的长度 （因为数组里面什么都可以存）
+   *缺一不可
+   
+Demo1
+#include <stdio.h>
+void f(int * pArr, int len)
+{
+    pArr[2] = 10;
+}
