@@ -1,0 +1,25 @@
+# include <stdio.h>
+void f(int * pArr, int len)
+{
+   pArr[3] = 88;
+  //int i;
+  //for( i=0; i<len; ++i)
+  //{
+   //printf("%d",*(pArr+i)); //这里输出就是 *pArr *pArr+1 *pArr+2 
+   //printf("\n");
+  //}
+}
+int main(void)
+{
+  int a[5] = {1,2,3,4,5};
+  int b[6] = {-1,-2,-3,-4,-5,-6}
+  int c[100] = {1, 99, 22, 33};
+  //这里空白的地方可能都是0
+  f(a, 6);//这里的结果就是88
+  /*
+  因为在这里pArr就是a的副本，所以pArr指的东西，就是对a进行了操作
+  */
+  
+  return 0;
+}
+
