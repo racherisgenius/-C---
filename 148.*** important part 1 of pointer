@@ -1,0 +1,15 @@
+# include <stdio.h>
+void f (int **q)//q还是4个字节的指针变量
+{
+  int i = 5;
+  //*q等于p
+  //*q = i 是错的
+  *q = &i;
+  
+}
+int main(void)
+{
+    int * p;
+    f(&p);
+    retutn 0;
+}
