@@ -1,0 +1,19 @@
+# include <stdio.h>
+# include <malloc.h>
+voif f(int *q)
+{
+  *q = 200; //把q的内容给了p aka q是p的副本
+  free(q); //如果你写了这个，就说明q所指向的内存不在了，但是p所指向的内存还是在的
+}
+
+int main(void)
+{
+    int * p = (int *) malloc(sizeof(int));
+    //sizeof() 返回值是int所占的字节数
+    *p = 10;
+    
+    printf("%d\n", *p); //10
+    f();
+    printf("%d\n", *p); //200
+    return 0;
+}
