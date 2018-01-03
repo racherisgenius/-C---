@@ -1,0 +1,27 @@
+1. 如何建立动态数组
+ex:
+
+# include <stdio.h>
+# include <malloc.h>
+int main (void)
+{
+    int a[5]; //这里就是20个字节了，每4个字节一个int
+    //
+    int len;
+    int * pArr;
+    
+    printf("请输入你要放几个元素呀~");
+    scanf("%d", &len);
+    pArr = (int *)malloc(4 * len); //类似于int pArr[len]
+    //pArr存的是前4个字节
+    
+    return 0;
+    
+    //对动态一维数组进行赋值 
+    for(i=0; i<len; ++i)
+      scanf("%d", &pArr[i]);
+      
+    free(pArr); //完毕后可以自由释放数组
+    
+}
+*realloc(); //就是一种对动态函数的重新分配空间
