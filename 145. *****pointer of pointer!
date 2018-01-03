@@ -1,0 +1,39 @@
+# include <stdio.h>
+int main(void)
+{
+    int i = 10;
+    int * p = &i;
+    int ** q = &p;
+    int ***r = &q;
+    
+    /*
+      p存的是i的地址，因为i是一个int，所以p是一个int i的* → int * p
+      q存的是p的地址，而p是一个int*，所以q是一个int* q的* → int ** q
+      r存的是q的地址，q是一个int**，那么r就是一个int** q的* → int ***r
+      ex：i(10) -- 1000H
+          p(1000H) -- 2000H
+          q(2000H) -- 3000H
+          r(3000H) -- 4000H
+    */
+    
+    
+    return 0;
+}
+
+void f(int ** q)
+{
+  *q = p //因为 
+}
+
+void g()
+{
+  int i = 10; 
+  int * p = &i;
+  f(&p); //因为p是一个int * 类型，那么&p就会是一个int**的类型
+}
+
+int main(void)
+{
+  g();
+  return 0;
+}
