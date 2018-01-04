@@ -1,0 +1,19 @@
+# include <stdio.h>
+void f(int **q)
+{
+  *q = (int *)malloc (sizeof(int)); //要注意整型不一定占4个字节，所以这里使用的是sizeof（int）
+  //等价于p = (int *)malloc (sizeof(int));
+  **q = 5;
+  /*
+  q = 5 → q里面存放的是p的地址 所示不可以直接用q = 5
+  *q = 5 → 就是p，但是p里面只可以放地址
+  **q = 5 → 所以这个是对的**q == *p
+  */
+}
+int main (void)
+{
+  int * q;
+  f(&q);
+  printf("%d\n",*p); //因为p是被动态分配过的，所以是不会被自动释放的
+  return 0;
+}
