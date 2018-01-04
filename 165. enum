@@ -1,0 +1,15 @@
+1. 什么是枚举
+ - 把事物所有可能的的值都取出来
+ ex: 
+ enum WeekDay
+ {
+  Mon, Tue, Wed, Thu, Fri, Sat, Sun
+ };
+ # include <stdio.h>
+ int main(void)
+ {
+    bnum WeekDay day = Mon; 
+    return 0;
+ }
+2. 如何使用枚举
+3. 枚举的优缺点
