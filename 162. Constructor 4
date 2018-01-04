@@ -1,0 +1,13 @@
+结构体变量的运算
+ - 结构体变量不能相加，相减，相互乘除
+ - 但是可以相互赋值！
+ ex:
+  struct Student
+  {
+      int age;
+      char sex;
+      char name[100];
+  };
+  struct Student st1, st2;
+  st1 = st2//这样就大丈夫了！
+  
