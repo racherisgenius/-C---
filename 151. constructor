@@ -1,0 +1,25 @@
+
+# include <stduio.h>
+struct Student
+{
+    int age;
+    float score;
+    char sex;
+    
+};
+int main(void)
+{ 
+    struct Stdent st = {80, 66.6, 'F'}; //模拟了
+    /*
+    利用结构体，我们可以创造出新的数据类型
+    所以这样我们就可以模仿更多复杂的事物了
+    */
+    int age;
+    float score;
+    char sex;
+  
+}
+1. why do we need constructor 
+ - 为了表示复杂的事物，而普通的基本类型无法满足实际要求
+ 1） 什么叫做结构体
+     - 把一些基本类型组合在一起变成一个新的复合数据类型，那么这个数据类型就叫结构体
