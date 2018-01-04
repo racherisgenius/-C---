@@ -1,0 +1,32 @@
+1. 如何定义结构体？
+  - 3 个方式
+ 1） 第一种
+ ex:
+     #include <stdio.h>
+     struct Student 
+     {
+          int age;
+          float score;
+          char sex;
+     };
+     int main(void)
+     {
+          struct Student st = {80, 66.6, 'F'};
+          return 0;
+     }
+   2) 第二种
+   ex：
+     struct Student 
+     {
+          int age;
+          float score;
+          char sex;
+     }st2;
+   3) 第三种
+   ex:
+     struct 
+     {
+          int age;
+          float score;
+          char sex;
+     }st3;
