@@ -1,0 +1,66 @@
+思路：
+1. 动态构造一个数组，存放学生info
+2. 按分数sort好输出
+
+# include <stdio.h>
+# include <malloc.h>
+struct Student
+{
+    int age;
+    float score;
+    char name[100];
+    
+};
+
+int main(void)
+{
+    int len;
+    struct Student * pArr;
+    int i, j;
+    struct Student t; //为了后面swap type需要一致
+    
+    
+    printf("请输入学生的个数:\n");
+    printf("len = ");
+    scanf("%d",&len);
+    pArr = (struct Student *)malloc(len  *sizeof(struct Student));
+    
+    
+    //get variable
+    for(i=0; i<len; ++i)
+    {
+      printf("请输入第%d个学生的信息：", i+1);
+      printf("age = ");
+      scanf("%d", &pArr[i].age);
+      
+      printf("name = ");
+      scanf("%s", pArr[i].name); //name是数组名，本身自己就是数组里首元素的地址了
+      //所以在这里不可以用&
+      
+      printf("score = ");
+      scanf("%f", &pArr[i].score)；
+    }
+    
+    
+    
+    //按照学生成绩sort
+    for(i=0;i<len-1; ++i)
+    {
+      for(j=0; j<len-1-i;++k)
+      {
+        if(pArr[j] > pArr[j+1]) //这里会出错，因为pArr里面包括了3个成员，而我们是不可以拿成员和成员进行比较的
+        {
+        //要改成这样 pArr[j].score >pArr[j]. score
+        /*
+          如果a成绩比b高，那么是互换位子还是互换成绩？
+          - 互换的是位子，而不是成绩，所以底下的代码是对的
+        */
+              t = pArr[j];
+              pArr[j] = pArr[j+1];
+              pArr[j+1] = t;
+        }
+      }
+    }
+    
+    return 0;
+}
