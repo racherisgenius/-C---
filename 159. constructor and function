@@ -1,0 +1,35 @@
+# include <stdio.h>
+# include <string.h>
+void InputStudent( struct Student * stu
+struct Stduent
+{
+    int age;
+    char sex;
+    char name[100];
+};
+
+int main(void)
+{
+    struct Student st;
+    InputStudent(&st);
+    OutputStudent();
+    return 0;
+    
+}
+void OutputStudent(struct Student *s
+void InputStudent( struct Student * pstu);
+{
+    (*pstu).age = 10;
+   strcpy(pstu->name,"三哥");
+   pstu->sex = 'F';
+    
+}
+/*
+    double * p;
+    double i = 9.0;
+    p = &i;
+    而一开始我们说过p是只会存i的地址的第一个地址，那为什么又说p可以指向i呢？
+    因为p一开始就被定义好是一个double类型了，所以就get了double的存储字节
+    同理在我们这个student里面，当我们一旦用了student * p，那么这个p就具备
+    student这个类里面所有的占用字节的总和 = 105
+*/
