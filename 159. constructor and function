@@ -16,7 +16,11 @@ int main(void)
     return 0;
     
 }
-void OutputStudent(struct Student *s
+void OutputStudent(struct Student s) //这个s只是get st的值
+{
+    //因为这里不需要对值进行修改，所以我们不需要用到指针
+    printf("%d %c %s\n", ss.age, ss.sex, ss.name);
+}
 void InputStudent( struct Student * pstu);
 {
     (*pstu).age = 10;
